@@ -3,8 +3,8 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { lens, withLenses } from "@dhmk/zustand-lens";
-import { Test1, test1State } from "./test1slice.tsx";
-import { Test2, test2State } from "./test2Slice.tsx";
+import { Test1, test1State } from "./test1State.ts";
+import { Test2, test2State } from "./test2State.ts";
 
 export interface Store {
   test1State: Test1;

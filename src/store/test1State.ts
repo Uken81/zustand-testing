@@ -1,5 +1,4 @@
-import { Lens, Setter } from "@dhmk/zustand-lens";
-import { StateCreator } from "zustand";
+import { Lens } from "@dhmk/zustand-lens";
 import { Store } from "./useStore";
 
 export type Test1 = {

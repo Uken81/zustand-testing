@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useBoundStore } from "./store/useBoundStore.tsx";
+import { useStore } from "./store/useStore.tsx";
 
 function App() {
-  const test1 = useBoundStore((state) => state.test1);
-  const test2 = useBoundStore((state) => state.test2);
-  const update1 = useBoundStore((state) => state.updateTest1);
-  const update2 = useBoundStore((state) => state.updateTest2);
-  const reset1 = useBoundStore((state) => state.resetTest1);
-  const reset2 = useBoundStore((state) => state.resetTest2);
+  const test1 = useStore((state) => state.test1State.test1);
+  const test2 = useStore((state) => state.test2State.test2);
+  const update1 = useStore((state) => state.test1State.updateTest1);
+  const update2 = useStore((state) => state.test2State.updateTest2);
+  const reset1 = useStore((state) => state.test1State.resetTest1);
+  const reset2 = useStore((state) => state.test2State.resetTest2);
   return (
     <div className="App">
       <header className="App-header">

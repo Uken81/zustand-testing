@@ -1,8 +1,7 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-
+import { lens, withLenses, persistOptions } from "@dhmk/zustand-lens";
 import { mountStoreDevtool } from "simple-zustand-devtools";
-import { lens, withLenses } from "@dhmk/zustand-lens";
 import { Test1, test1State } from "./test1State.ts";
 import { Test2, test2State } from "./test2State.ts";
 
@@ -20,6 +19,7 @@ export const useStore = create<Store>()(
     {
       name: "state-storage",
       storage: createJSONStorage(() => sessionStorage),
+      ...persistOptions,
     }
   )
 );

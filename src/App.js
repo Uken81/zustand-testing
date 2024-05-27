@@ -5,10 +5,11 @@ import { useStore } from "./store/useStore.tsx";
 function App() {
   const test1 = useStore((state) => state.test1State.test1);
   const test2 = useStore((state) => state.test2State.test2);
-  const update1 = useStore((state) => state.test1State.updateTest1);
-  const update2 = useStore((state) => state.test2State.updateTest2);
-  const reset1 = useStore((state) => state.test1State.resetTest1);
+  const updateTest1 = useStore((state) => state.test1State.updateTest1);
+  const updateTest2 = useStore((state) => state.test2State.updateTest2);
+  const resetTest1 = useStore((state) => state.test1State.resetTest1);
   const reset2 = useStore((state) => state.test2State.resetTest2);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,9 +28,9 @@ function App() {
       </header>
       <h1>value1: {test1}</h1>
       <h1>value2: {test2}</h1>
-      <button onClick={() => update1("test1")}>UPDATE1</button>
-      <button onClick={() => update2("test2")}>UPDATE2</button>
-      <button onClick={reset1}>RESET1</button>
+      <button onClick={() => updateTest1("test1")}>UPDATE1</button>
+      <button onClick={() => updateTest2("test2")}>UPDATE2</button>
+      <button onClick={resetTest1}>RESET1</button>
       <button onClick={reset2}>RESET2</button>
     </div>
   );
